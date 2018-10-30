@@ -28,7 +28,8 @@
 		if (empty($bday)) { array_push($errors, "Birthday is required"); }
 		if (empty($email)) { array_push($errors, "Email is required"); }
 		if (empty($password_1)) { array_push($errors, "Password is required"); }
-		
+		$cnt=mysqli_num_rows(mysqli_query($db, "select * from users where username='$username'"));
+		if($cnt>0){ array_push($errors, "Username is already exist."); }
 		if ($password_1 != $password_2) {
 			array_push($errors, "The two passwords do not match");
 		}
