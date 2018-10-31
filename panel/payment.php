@@ -35,6 +35,7 @@
 		<h3>CVV:</h3>
 			<input type="text" name="cvv" size='3' maxlength='3' >
 		</br></br>
+		Only 70 TL</br>
 		<button type="submit"  name="pay">Pay</button>
 		<p> <a href="index.php" style="color: blue;">Back</a> </p>
 		

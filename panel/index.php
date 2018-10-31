@@ -14,6 +14,7 @@
 	}
 
 ?>
+<?php $db = mysqli_connect('localhost', 'root', '', 'registration'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,6 +42,12 @@
 		
 		<?php  if (isset($_SESSION['username'])) : ?>
 			<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+			<?php 
+			$username=$_SESSION['username'];
+		$cnt=mysqli_num_rows(mysqli_query($db, "select * from selling where name='$username'"));
+		if($cnt>0){ 
+		echo "You have access to program. Your payment has been done. ";}
+		?>
 			<p> <a href="payment.php" style="color: blue;">Payment</a> </p>
 			<p> <a href="changepass1.php" style="color: blue;">Change your password</a> </p>
 			<p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
