@@ -8,7 +8,7 @@
 	$_SESSION['success'] = "";
 
 	
-	$db = mysqli_connect('localhost', 'root', '', 'registration');
+	$db = mysqli_connect('www.db4free.net', 'kompiroot', 'kompi123', 'kompiregister');
 
 	
 	if (isset($_POST['reg_user'])) {
