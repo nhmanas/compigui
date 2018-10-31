@@ -30,6 +30,7 @@
 		if (empty($password_1)) { array_push($errors, "Password is required"); }
 		$cnt=mysqli_num_rows(mysqli_query($db, "select * from users where username='$username'"));
 		if($cnt>0){ array_push($errors, "Username is already exist."); }
+		
 		if ($password_1 != $password_2) {
 			array_push($errors, "The two passwords do not match");
 		}
@@ -39,10 +40,16 @@
 			$query = "INSERT INTO users (username, name, city, bday, email, password) 
 					  VALUES('$username', '$name', '$city', '$bday', '$email', '$password')";
 			mysqli_query($db, $query);
-
+			if($username == 'admin'){
+			$_SESSION['admin'] = $username;
+			$_SESSION['successadmin'] = "You are now logged in";
+			header('location: admin.php');
+			}
+			else{
 			$_SESSION['username'] =$name;
 			$_SESSION['success'] = "You are now logged in";
 			header('location: index.php');
+			}
 		}
 
 	}
@@ -67,9 +74,19 @@
 			$results = mysqli_query($db, $query);
 
 			if (mysqli_num_rows($results) == 1) {
+				if($username == 'admin'){
+					 
+					$_SESSION['admin'] = $username;
+					$_SESSION['successadmin'] = "You are now logged in";
+					header('location: admin.php');
+		
+	}
+				
+				else{
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are now logged in";
 				header('location: index.php');
+				}
 			}else {
 				array_push($errors, "Wrong username/password combination");
 			}
