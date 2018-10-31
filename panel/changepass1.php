@@ -56,6 +56,7 @@
             </p>
              
         </form>
+		<p> <a href="index.php" style="color: blue;">Back</a> </p>
 		<p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
 		<?php endif ?>
          

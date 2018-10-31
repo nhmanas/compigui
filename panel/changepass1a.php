@@ -25,7 +25,7 @@ $db = mysqli_connect('localhost', 'root', '', 'registration');
 			$query = "UPDATE users SET password='$password_2' WHERE username='$username'";
 			
 			if (mysqli_query($db, $query)) {
-				echo "Record updated successfully";
+				echo "Your password has been changed successfully";
 			} else {
 				echo "Error updating record: " . mysqli_error($db);
 			}
