@@ -25,9 +25,12 @@ $db = mysqli_connect('localhost', 'root', '', 'registration');
 		if(!$result1){array_push($errors, "Cvv must be only numbers."); }
 		$result2=ctype_digit($date);
 		if(!$result2){array_push($errors, "Date must be only numbers."); }
+		$cnt=mysqli_num_rows(mysqli_query($db, "select * from selling where name='$username'"));
+		if($cnt>0){ array_push($errors, "You have already payed."); }
 		
 		if (count($errors) == 0) {
 			$pay='p';
+			
 			$query="INSERT INTO selling (name, pay)
 					VALUES('$username', '$pay')";
 			$payed=mysqli_query($db, $query);

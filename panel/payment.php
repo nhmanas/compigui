@@ -14,6 +14,11 @@
 </head>
 <body>
 		<?php  if (isset($_SESSION['username'])) : ?>
+		<?php 
+		$cnt=mysqli_num_rows(mysqli_query($db, "select * from selling where name='$username'"));
+		if($cnt>0){ 
+		echo "You have already payed.You don't need to buy again :) ";}
+		?>
 		<h2>Enter your credit card informations</h2>
 		<form method="post" action="payment.php">
 		<?php include('errors.php'); ?>
