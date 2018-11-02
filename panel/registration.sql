@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 31 Eki 2018, 19:06:22
+-- Üretim Zamanı: 02 Kas 2018, 17:02:44
 -- Sunucu sürümü: 5.7.23
 -- PHP Sürümü: 7.2.10
 
@@ -34,14 +34,15 @@ CREATE TABLE IF NOT EXISTS `selling` (
   `name` varchar(100) NOT NULL,
   `pay` char(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Tablo döküm verisi `selling`
 --
 
 INSERT INTO `selling` (`id`, `name`, `pay`) VALUES
-(1, 'user', 'p');
+(1, 'user', 'p'),
+(2, 'admin', 'p');
 
 -- --------------------------------------------------------
 
@@ -58,16 +59,19 @@ CREATE TABLE IF NOT EXISTS `users` (
   `bday` date NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
+  `level` int(11) NOT NULL DEFAULT '2',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Tablo döküm verisi `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `name`, `city`, `bday`, `email`, `password`) VALUES
-(1, 'admin', 'adminastrator', 'mersin', '1996-03-06', 'admin@admin.com', '21232f297a57a5a743894a0e4a801fc3'),
-(4, 'user', 'user', 'mersin', '1996-06-06', 'user@user.com', 'ee11cbb19052e40b07aac0ca060c23ee');
+INSERT INTO `users` (`id`, `username`, `name`, `city`, `bday`, `email`, `password`, `level`) VALUES
+(1, 'admin', 'adminastrator', 'mersin', '1996-03-06', 'admin@admin.com', '21232f297a57a5a743894a0e4a801fc3', 1),
+(4, 'user', 'user', 'mersin', '1996-06-06', 'user@user.com', 'ee11cbb19052e40b07aac0ca060c23ee', 2),
+(6, 'deneme', 'deneme', 'deneme', '2018-10-30', 'deneme@gmail.com', '8f10d078b2799206cfe914b32cc6a5e9', 2),
+(7, 'ibo', 'iburamin', 'ibocity', '2018-11-02', 'ibocity@ibocity.com', 'ibo', 2);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
