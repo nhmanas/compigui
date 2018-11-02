@@ -37,6 +37,8 @@ namespace WindowsFormsApplication3
             string strCmdText;
             strCmdText = "/C ping google.com";
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+            strCmdText = "/C pause";
+            System.Diagnostics.Process.Start("CMD.exe", strCmdText);
         }
     }
 }
