@@ -29,7 +29,7 @@ namespace WindowsFormsApplication3
             kompigui fr2 = new kompigui();
             this.Visible = true;
             a.Show();
-            this.Hide();
+            Close();
         }
 
         private void execute_Click(object sender, EventArgs e)
@@ -40,6 +40,11 @@ namespace WindowsFormsApplication3
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
             strCmdText = "/C compact /c /s /a /i /exe:lzx '" + dirdes + " *'";
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+        }
+
+        private void kompigui_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
