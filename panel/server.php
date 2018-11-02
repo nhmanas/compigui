@@ -73,12 +73,12 @@
 			$password = md5($password);
 			$query = "SELECT * FROM users WHERE username='$username' AND password='$password' ";
 			
-			$querylevel= "SELECT * FROM users WHERE username='$username' AND level='$level' ";
+			$querylevel= "SELECT * FROM users WHERE username='$username' AND level='1' ";
 			$resultquerry=mysqli_query($db, $querylevel);
 			$results = mysqli_query($db, $query);
 
 			if (mysqli_num_rows($results) == 1) {
-				if($level == '1'){
+				if(mysqli_num_rows($resultquerry)==1){
 					 
 					$_SESSION['admin'] = $username;
 					$_SESSION['successadmin'] = "You are now logged in";
