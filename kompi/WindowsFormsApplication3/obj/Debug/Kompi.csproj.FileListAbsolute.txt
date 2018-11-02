@@ -1,1 +1,12 @@
 C:\Users\thonwhal\Documents\Visual Studio 2013\Projects\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csprojAssemblyReference.cache
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Form1.resources
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.kompigui.resources
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csproj.GenerateResource.cache
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csproj.CoreCompileInputs.cache
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
