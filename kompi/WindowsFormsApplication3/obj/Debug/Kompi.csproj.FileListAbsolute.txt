@@ -1,6 +1,5 @@
 C:\Users\thonwhal\Documents\Visual Studio 2013\Projects\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
 C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csprojAssemblyReference.cache
-C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Form1.resources
 C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.kompigui.resources
 C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
 C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csproj.GenerateResource.cache
@@ -22,3 +21,7 @@ C:\Users\thonwhal\Desktop\Yeni klasör\compigui\compigui\kompi\WindowsFormsAppli
 C:\Users\thonwhal\Desktop\Yeni klasör\compigui\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.loginscreen.resources
 C:\Users\thonwhal\Desktop\Yeni klasör\compigui\compigui\kompi\WindowsFormsApplication3\bin\Debug\MySql.Data.dll
 C:\Users\thonwhal\Desktop\Yeni klasör\compigui\compigui\kompi\WindowsFormsApplication3\bin\Debug\MySql.Data.xml
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.loginscreen.resources
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\MySql.Data.dll
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\MySql.Data.xml
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csproj.CopyComplete
