@@ -35,9 +35,10 @@ namespace WindowsFormsApplication3
         private void execute_Click(object sender, EventArgs e)
         {
             string strCmdText;
-            strCmdText = "/C ping google.com";
+            string destination = textBox1.Text;
+            strCmdText = "/C compact /c /s /a /i /exe:lzx '" + destination + "'";
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
-            strCmdText = "/C pause";
+            strCmdText = "/C compact /c /s /a /i /exe:lzx '" + dirdes + " *'";
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
         }
     }
