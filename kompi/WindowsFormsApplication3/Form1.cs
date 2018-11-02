@@ -40,7 +40,9 @@ namespace WindowsFormsApplication3
         private void button1_Click(object sender, EventArgs e)
         {
             kompigui frm = new kompigui();
+            Form1 frm1 = new Form1();
             frm.Show();
+            this.Hide();
         }
     }
 }
