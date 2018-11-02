@@ -25,7 +25,7 @@ namespace WindowsFormsApplication3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 a = new Form1();
+            loginscreen a = new loginscreen();
             kompigui fr2 = new kompigui();
             this.Visible = true;
             a.Show();
