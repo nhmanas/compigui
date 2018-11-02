@@ -11,6 +11,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 
+
 namespace WindowsFormsApplication3
 {
     public partial class loginscreen : Form
@@ -78,17 +79,35 @@ namespace WindowsFormsApplication3
             mysqlbaglan.Open();
             if (mysqlbaglan.State != ConnectionState.Closed)
             {
+                char paid = 'p';
                 string str = MD5(textBox2.Text);
                 textBox2.Text = str;
                 string sql = "SELECT * FROM `users` WHERE `username` = '" + textBox1.Text + "' AND `password` = '" + textBox2.Text + "' ";
+                string sqlpay = "SELECT * FROM `selling` WHERE `name` = '" + textBox1.Text + "' AND `pay` = '" + paid + "' ";
+                MySqlCommand pay = new MySqlCommand(sqlpay, mysqlbaglan);
+                
                 MySqlCommand cmd = new MySqlCommand(sql, mysqlbaglan);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 
+                
                 if (rdr.Read())
                 {
-                    kompigui frm = new kompigui();
-                    frm.Show();
-                    this.Hide();
+                    mysqlbaglan.Close();
+                    mysqlbaglan.Open();
+
+                    MySqlDataReader rdrpay = pay.ExecuteReader();
+                    if(rdrpay.Read())
+                    {
+                        kompigui frm = new kompigui();
+                        frm.Show();
+                        this.Hide();
+                        mysqlbaglan.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("You didn't pay for it. Please buy first.");
+                    }
+                    
                 }
 
 
