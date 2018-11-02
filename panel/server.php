@@ -40,6 +40,7 @@
 			$query = "INSERT INTO users (username, name, city, bday, email, password) 
 					  VALUES('$username', '$name', '$city', '$bday', '$email', '$password')";
 			mysqli_query($db, $query);
+			
 			if($username == 'admin'){
 			$_SESSION['admin'] = $username;
 			$_SESSION['successadmin'] = "You are now logged in";
@@ -70,11 +71,14 @@
 
 		if (count($errors) == 0) {
 			$password = md5($password);
-			$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+			$query = "SELECT * FROM users WHERE username='$username' AND password='$password' ";
+			
+			$querylevel= "SELECT * FROM users WHERE username='$username' AND level='$level' ";
+			$resultquerry=mysqli_query($db, $querylevel);
 			$results = mysqli_query($db, $query);
 
 			if (mysqli_num_rows($results) == 1) {
-				if($username == 'admin'){
+				if($level == '1'){
 					 
 					$_SESSION['admin'] = $username;
 					$_SESSION['successadmin'] = "You are now logged in";
