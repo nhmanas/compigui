@@ -8,7 +8,7 @@
 	$_SESSION['success'] = "";
 
 	
-	$db = mysqli_connect('sql300.epizy.com', 'epiz_22938615', 'qpo4FvYLjz', 'epiz_22938615_registration');
+	$db = mysqli_connect('45.61.159.32', 'G3i5MrhORu', 'g89aY6ueL4', 'G3i5MrhORu');
 
 	
 	if (isset($_POST['reg_user'])) {

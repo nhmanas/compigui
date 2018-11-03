@@ -23,5 +23,3 @@ C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsAppl
 C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\MySql.Data.dll
 C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\MySql.Data.xml
 C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csproj.CopyComplete
-C:\Users\thonwhal\Desktop\Yeni klasör\compigui\compigui\kompi\WindowsFormsApplication3\bin\Debug\MySql.Data.dll
-C:\Users\thonwhal\Desktop\Yeni klasör\compigui\compigui\kompi\WindowsFormsApplication3\bin\Debug\MySql.Data.xml
