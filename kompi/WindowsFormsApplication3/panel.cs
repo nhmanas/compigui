@@ -21,5 +21,10 @@ namespace WindowsFormsApplication3
         {
 
         }
+
+        private void panel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

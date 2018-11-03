@@ -50,6 +50,7 @@
             this.Controls.Add(this.webBrowser1);
             this.Name = "panel";
             this.Text = "Kompi Web";
+            this.Load += new System.EventHandler(this.panel_Load);
             this.ResumeLayout(false);
 
         }

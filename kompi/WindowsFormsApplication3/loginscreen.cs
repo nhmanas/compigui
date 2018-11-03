@@ -141,6 +141,12 @@ namespace WindowsFormsApplication3
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel frm = new panel();
+            frm.Show();
+        }
+
 
     }
 }
