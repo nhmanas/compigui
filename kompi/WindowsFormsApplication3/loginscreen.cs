@@ -16,14 +16,15 @@ namespace WindowsFormsApplication3
 {
     public partial class loginscreen : Form
     {
-       
 
-	
+
+
         private static string sIp = "localhost";
-        private static string sDB = "registration"; 
-        private static string sKA = "root"; 
-        private static string sSifre = ""; 
-        public MySqlConnection mysqlbaglan = new MySqlConnection("Server=" + sIp + ";Database=" + sDB + ";Uid=" + sKA + ";Pwd='" + sSifre + "';");
+        private static string sPt = "3306";
+        private static string sDB = "registration";
+        private static string sKA = "root";
+        private static string sSifre = "";
+        public MySqlConnection mysqlbaglan = new MySqlConnection("Server=" + sIp + ";Port=" + sPt + ";Database=" + sDB + ";Uid=" + sKA + ";Pwd='" + sSifre + "';");
         public static string MD5(string metin)
         {
             
@@ -75,7 +76,7 @@ namespace WindowsFormsApplication3
         {
             string user = textBox1.Text;
             string pass = textBox2.Text;
-  
+            
             mysqlbaglan.Open();
             if (mysqlbaglan.State != ConnectionState.Closed)
             {

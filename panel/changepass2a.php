@@ -2,7 +2,7 @@
 
 $username=$_SESSION['admin'];
 $errors = array();
-$db = mysqli_connect('localhost', 'root', '', 'registration');
+$db = mysqli_connect('sql300.epizy.com', 'epiz_22938615', 'qpo4FvYLjz', 'epiz_22938615_registration');
 
 	if (isset($_POST['change_password'])) {
 		$password_1 = mysqli_real_escape_string($db, $_POST['current_password']);

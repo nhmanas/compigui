@@ -7,7 +7,7 @@
 	}
 ?>
 <!DOCTYPE html>
-<?php $db = mysqli_connect('localhost', 'root', '', 'registration'); ?>
+<?php $db = mysqli_connect('sql300.epizy.com', 'epiz_22938615', 'qpo4FvYLjz', 'epiz_22938615_registration'); ?>
 <html>
 <head>
 	<title>User Control Panel</title>
