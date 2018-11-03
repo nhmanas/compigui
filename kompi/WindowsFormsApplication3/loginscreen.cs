@@ -77,6 +77,7 @@ namespace WindowsFormsApplication3
             progressBar1.Visible = true;
             string user = textBox1.Text;
             string pass = textBox2.Text;
+            
 
             mysqlbaglan.Open();
             if (mysqlbaglan.State != ConnectionState.Closed)

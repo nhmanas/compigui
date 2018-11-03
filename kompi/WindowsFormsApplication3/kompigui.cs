@@ -12,7 +12,6 @@ using System.Windows.Forms;
 namespace WindowsFormsApplication3
 {
     public partial class kompigui : Form
-
     {
         public kompigui()
         {
@@ -37,7 +36,7 @@ namespace WindowsFormsApplication3
         {
             string strCmdText;
             string destination = textBox1.Text;
-            strCmdText = "/C compact /c /s /a /i /exe:lzx '" + destination + "'";
+            strCmdText = "/C compact /c /s /a /i /exe:lzx " + destination + "'";
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
         }
 
@@ -56,6 +55,7 @@ namespace WindowsFormsApplication3
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             string strCmdText;
             string dirdes1 = dirdes.Text;
             strCmdText = "/C compact /c /s /a /i /exe:lzx '" + dirdes1 + " *'";
@@ -98,6 +98,20 @@ namespace WindowsFormsApplication3
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+        Point lastPoint;
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }
