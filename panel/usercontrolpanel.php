@@ -39,6 +39,31 @@ else{
 }
 }
 ?>
+</br>
+Enter an id if you want to promote an account as an admin:</br>
+<input type="text" name="id2" >
+<input type="submit" name="promote" value="Promote">
+<?php
+if (isset($_POST['promote'])) {
+$id=$_POST['id2'];
+echo "</br>";
+$query="SELECT * FROM users where id='$id'";
+$results = mysqli_query($db, $query);
+if((mysqli_num_rows($results))>0){
+	$promote="UPDATE users SET level='1' where id='$id'";
+	$prom=mysqli_query($db, $promote);
+	if($prom){
+		echo "Successfully promoted.";
+	}
+	else{
+		echo "Fail";
+	}
+}
+else{
+	echo "ID not found.";
+}
+}
+?>
 </form>
 <p> <a href="admin.php" style="color: blue;">Back</a> </p>
 <h2>User List:</h2>
@@ -51,6 +76,7 @@ else{
 	echo "------------------------ </br>";
 	echo "ID: ".$id."</br>";
 	echo "Username: ".$username."</br>";
+	echo "LEVEL: ".$level."</br>";
 	echo "Name: ".$name."</br>";
 	echo "City: ".$city."</br>";
 	echo "Birthday: ".$bday."</br>";
