@@ -46,10 +46,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this._output = new System.Windows.Forms.RichTextBox();
+            this.clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +68,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(21, 250);
+            this.button1.Location = new System.Drawing.Point(12, 481);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -245,11 +249,41 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Automatic Compression";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this._output);
+            this.groupBox3.Location = new System.Drawing.Point(12, 250);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(347, 225);
+            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Output";
+            // 
+            // _output
+            // 
+            this._output.Location = new System.Drawing.Point(6, 19);
+            this._output.Name = "_output";
+            this._output.Size = new System.Drawing.Size(335, 200);
+            this._output.TabIndex = 0;
+            this._output.Text = "";
+            // 
+            // clear
+            // 
+            this.clear.Location = new System.Drawing.Point(284, 481);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(75, 23);
+            this.clear.TabIndex = 19;
+            this.clear.Text = "Clear output";
+            this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
+            // 
             // kompigui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 281);
+            this.ClientSize = new System.Drawing.Size(371, 516);
+            this.Controls.Add(this.clear);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -267,6 +301,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,5 +327,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RichTextBox _output;
+        private System.Windows.Forms.Button clear;
     }
 }

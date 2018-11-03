@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication3
@@ -55,11 +56,33 @@ namespace WindowsFormsApplication3
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-            string strCmdText;
+            //strCmdText /k cmd kalır, /c işlem bitince kapanır
+            //string strCmdText;
             string dirdes1 = dirdes.Text;
-            strCmdText = "/C compact /c /s /a /i /exe:lzx '" + dirdes1 + " *'";
-            System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+            //strCmdText = "/k compact /c /s /a /i /exe:lzx '" + dirdes1 + " *'";
+            //System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+
+            //System.Diagnostics.Process process = new System.Diagnostics.Process();
+            //System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            //startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            //startInfo.FileName = "cmd.exe";
+            //startInfo.Arguments = "/C compact /c /s /a /i /exe:lzx '" + dirdes1 + " *'";
+            //process.StartInfo = startInfo;
+            //process.Start();
+            //_output.Text = process.StandardOutput.ReadToEnd();
+
+            
+            Process lzx = new Process();
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            lzx.StartInfo.FileName = "cmd.exe";
+            lzx.StartInfo.UseShellExecute = false;
+            lzx.StartInfo.Arguments = "/C compact /c /s /a /i /exe:lzx '" + dirdes1 + " *'";
+            lzx.StartInfo.RedirectStandardOutput = true;
+            lzx.Start();
+            _output.Text = lzx.StandardOutput.ReadToEnd();
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -112,6 +135,11 @@ namespace WindowsFormsApplication3
         private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+            _output.Text = "";
         }
     }
 }
