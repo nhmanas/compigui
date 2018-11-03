@@ -145,6 +145,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Apply";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
             // 
@@ -196,31 +197,6 @@
             // comboBox7
             // 
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "J",
-            "K",
-            "L",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O",
-            "P",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "Y",
-            "Z"});
             this.comboBox7.Location = new System.Drawing.Point(9, 32);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(257, 21);

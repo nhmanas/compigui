@@ -28,9 +28,9 @@ namespace WindowsFormsApplication3
         {
             loginscreen a = new loginscreen();
             kompigui fr2 = new kompigui();
-            this.Visible = true;
+            //this.Visible = true;
             a.Show();
-            Close();
+            this.Close();
         }
 
         private void execute_Click(object sender, EventArgs e)
@@ -43,7 +43,15 @@ namespace WindowsFormsApplication3
 
         private void kompigui_Load(object sender, EventArgs e)
         {
-            
+            //DRIVE TARAMA
+            foreach (var Drives in Environment.GetLogicalDrives())
+            {
+                DriveInfo DriveInf = new DriveInfo(Drives);
+                if (DriveInf.IsReady == true)
+                {
+                    comboBox7.Items.Add(DriveInf.Name);
+                }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -71,11 +79,25 @@ namespace WindowsFormsApplication3
 
         private void button4_Click(object sender, EventArgs e)
         {
+            /*
             DriveInfo[] allDrives = System.IO.DriveInfo.GetDrives();
             for (int i = 1; i < 7; i++)
             {
                 comboBox7.Items.Add(allDrives[i]);
             }
+            */
+
+            /*
+            comboBox7.DataSource = System.IO.DriveInfo.GetDrives()
+                .Where(d => d.DriveType == System.IO.DriveType.Network);
+            comboBox7.DisplayMember = "Name";
+            */
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
