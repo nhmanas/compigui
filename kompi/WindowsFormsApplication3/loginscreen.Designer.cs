@@ -57,7 +57,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(225, 127);
+            this.button1.Location = new System.Drawing.Point(225, 146);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -102,7 +102,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(38, 156);
+            this.progressBar1.Location = new System.Drawing.Point(38, 175);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(262, 18);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
@@ -112,7 +112,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(144, 127);
+            this.button2.Location = new System.Drawing.Point(38, 146);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 8;
