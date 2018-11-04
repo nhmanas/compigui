@@ -154,5 +154,39 @@ namespace WindowsFormsApplication3
             frm.Show();
             this.Hide();
         }
+
+        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
+        {
+            
+        }
+        
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+        Point lastPoint;
+        private void pictureBox2_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
     }
 }

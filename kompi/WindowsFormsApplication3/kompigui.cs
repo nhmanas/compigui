@@ -149,5 +149,10 @@ namespace WindowsFormsApplication3
         {
             _output.Text = "";
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
