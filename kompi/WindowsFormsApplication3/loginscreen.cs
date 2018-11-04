@@ -86,7 +86,7 @@ namespace WindowsFormsApplication3
                 string str = MD5(textBox2.Text);
                 textBox2.Text = str;
                 string sql = "SELECT * FROM `users` WHERE `username` = '" + textBox1.Text + "' AND `password` = '" + textBox2.Text + "' ";
-                string sqlpay = "SELECT * FROM `selling` WHERE `name` = '" + textBox1.Text + "' AND `pay` = '" + paid + "' ";
+                string sqlpay = "SELECT * FROM `users` WHERE `username` = '" + textBox1.Text + "' AND `pay` = '" + paid + "' ";
                 MySqlCommand pay = new MySqlCommand(sqlpay, mysqlbaglan);
 
                 MySqlCommand cmd = new MySqlCommand(sql, mysqlbaglan);
