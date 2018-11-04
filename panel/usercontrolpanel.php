@@ -81,7 +81,7 @@ else{
 	echo "City: ".$city."</br>";
 	echo "Birthday: ".$bday."</br>";
 	echo "E-mail: ".$email."</br>";
-	$pay="SELECT * FROM selling where name='$username'";
+	$pay="SELECT * FROM users where username='$username' AND pay='p'";
 	$pquery=mysqli_query($db,$pay);
 	if((mysqli_num_rows($pquery))>0){
 		echo "User paid. </br>";

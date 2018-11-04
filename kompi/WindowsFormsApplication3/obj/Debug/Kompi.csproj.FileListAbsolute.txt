@@ -25,3 +25,14 @@ C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\MySql.Data.xml
 C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csproj.CopyComplete
 C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.panel.resources
 C:\Users\thonwhal\Desktop\Yeni klasör\compigui\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.panel.resources
+C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csprojResolveAssemblyReference.cache
+C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.loginscreen.resources
+C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.kompigui.resources
+C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.panel.resources
+C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
+C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csproj.GenerateResource.Cache
+C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb

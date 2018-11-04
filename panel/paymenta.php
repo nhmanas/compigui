@@ -2,7 +2,6 @@
 $username=$_SESSION['username'];
 $errors = array();
 $db = mysqli_connect('45.61.159.32', 'G3i5MrhORu', 'g89aY6ueL4', 'G3i5MrhORu');
-
 	if (isset($_POST['pay'])) {
 		$card1=$_POST['card1'];
 		$card2=$_POST['card2'];
@@ -25,17 +24,17 @@ $db = mysqli_connect('45.61.159.32', 'G3i5MrhORu', 'g89aY6ueL4', 'G3i5MrhORu');
 		if(!$result1){array_push($errors, "Cvv must be only numbers."); }
 		$result2=ctype_digit($date);
 		if(!$result2){array_push($errors, "Date must be only numbers."); }
-		$cnt=mysqli_num_rows(mysqli_query($db, "select * from selling where name='$username'"));
+		$cnt=mysqli_num_rows(mysqli_query($db, "select * from users where username='$username' AND pay='p'"));
 		if($cnt>0){ array_push($errors, "You have already payed."); }
 		
 		if (count($errors) == 0) {
 			$pay='p';
 			
-			$query="INSERT INTO selling (name, pay)
-					VALUES('$username', '$pay')";
-			$payed=mysqli_query($db, $query);
+			$queryp="UPDATE users SET pay='p' WHERE username='$username'";
+			$payed=mysqli_query($db, $queryp);
 			if($payed){
 				echo "Payment has been done successfully";
+				header('location: index.php');
 			}
 			else{
 				echo "Failed.";

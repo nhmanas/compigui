@@ -20,7 +20,7 @@
 <p> <a href="admin.php" style="color: blue;">Back</a> </p>
 <?php 
 	$i=0;
-	$query="SELECT * FROM selling";
+	$query="SELECT * FROM users where pay='p'";
 	$sql=mysqli_query($db,$query);
 	while($pull = mysqli_fetch_array($sql)){
 	extract($pull);
@@ -30,11 +30,11 @@
 <h2>Paid User List:</h2>
 <?php
 	
-	$query="SELECT * FROM selling";
+	$query="SELECT * FROM users where pay='p'";
 	$sql=mysqli_query($db,$query);
 	while($pull = mysqli_fetch_array($sql)){
 	extract($pull);
-	$pay="SELECT * FROM users where username='$name'";
+	$pay="SELECT * FROM users where username='$username'";
 	$pquery=mysqli_query($db,$pay);
 	
 	while($pull = mysqli_fetch_array($pquery)){

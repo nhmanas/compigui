@@ -7,7 +7,7 @@
 </head>
 <body>
 		<h2>Login</h2>
-		<form method="post" action="login.php">
+		<form method="get" action="login.php">
 		<?php include('errors.php'); ?>
 
 			Username:</br>
