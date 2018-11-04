@@ -47,10 +47,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this._output = new System.Windows.Forms.RichTextBox();
-            this.clear = new System.Windows.Forms.Button();
-            this.showCommand = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this._output = new System.Windows.Forms.RichTextBox();
+            this.showCommand = new System.Windows.Forms.TextBox();
+            this.clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -83,7 +83,7 @@
             this.pictureBox2.Image = global::WindowsFormsApplication3.Properties.Resources.bar;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(381, 29);
+            this.pictureBox2.Size = new System.Drawing.Size(460, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -95,7 +95,7 @@
             this.pictureBox1.ErrorImage = global::WindowsFormsApplication3.Properties.Resources._52084;
             this.pictureBox1.Image = global::WindowsFormsApplication3.Properties.Resources.close_button_png_23;
             this.pictureBox1.InitialImage = global::WindowsFormsApplication3.Properties.Resources._52084;
-            this.pictureBox1.Location = new System.Drawing.Point(346, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(431, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -105,7 +105,7 @@
             // 
             // execute
             // 
-            this.execute.Location = new System.Drawing.Point(272, 68);
+            this.execute.Location = new System.Drawing.Point(357, 68);
             this.execute.Name = "execute";
             this.execute.Size = new System.Drawing.Size(69, 23);
             this.execute.TabIndex = 4;
@@ -126,7 +126,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(9, 70);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 20);
+            this.textBox1.Size = new System.Drawing.Size(342, 20);
             this.textBox1.TabIndex = 6;
             // 
             // label3
@@ -142,12 +142,12 @@
             // 
             this.dirdes.Location = new System.Drawing.Point(9, 32);
             this.dirdes.Name = "dirdes";
-            this.dirdes.Size = new System.Drawing.Size(257, 20);
+            this.dirdes.Size = new System.Drawing.Size(342, 20);
             this.dirdes.TabIndex = 8;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(272, 70);
+            this.button2.Location = new System.Drawing.Point(357, 70);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(69, 23);
             this.button2.TabIndex = 9;
@@ -169,7 +169,7 @@
             "Once a day"});
             this.comboBox1.Location = new System.Drawing.Point(9, 72);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 21);
+            this.comboBox1.Size = new System.Drawing.Size(342, 21);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.Text = "Select time interval";
             // 
@@ -184,7 +184,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(272, 29);
+            this.button3.Location = new System.Drawing.Point(357, 29);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(69, 23);
             this.button3.TabIndex = 12;
@@ -194,7 +194,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(272, 30);
+            this.button4.Location = new System.Drawing.Point(357, 30);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(69, 23);
             this.button4.TabIndex = 13;
@@ -207,7 +207,7 @@
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(9, 32);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(257, 21);
+            this.comboBox7.Size = new System.Drawing.Size(342, 21);
             this.comboBox7.TabIndex = 14;
             this.comboBox7.Text = "Select disk";
             // 
@@ -230,7 +230,7 @@
             this.groupBox1.Controls.Add(this.execute);
             this.groupBox1.Location = new System.Drawing.Point(12, 144);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(347, 100);
+            this.groupBox1.Size = new System.Drawing.Size(432, 100);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Manual Compression";
@@ -246,7 +246,7 @@
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Location = new System.Drawing.Point(12, 35);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(347, 103);
+            this.groupBox2.Size = new System.Drawing.Size(432, 103);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Automatic Compression";
@@ -258,35 +258,10 @@
             this.groupBox3.Controls.Add(this.showCommand);
             this.groupBox3.Location = new System.Drawing.Point(12, 250);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(347, 270);
+            this.groupBox3.Size = new System.Drawing.Size(432, 270);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Output";
-            // 
-            // _output
-            // 
-            this._output.Location = new System.Drawing.Point(6, 19);
-            this._output.Name = "_output";
-            this._output.Size = new System.Drawing.Size(335, 200);
-            this._output.TabIndex = 0;
-            this._output.Text = "";
-            // 
-            // clear
-            // 
-            this.clear.Location = new System.Drawing.Point(284, 526);
-            this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(75, 23);
-            this.clear.TabIndex = 19;
-            this.clear.Text = "Clear output";
-            this.clear.UseVisualStyleBackColor = true;
-            this.clear.Click += new System.EventHandler(this.clear_Click);
-            // 
-            // showCommand
-            // 
-            this.showCommand.Location = new System.Drawing.Point(6, 238);
-            this.showCommand.Name = "showCommand";
-            this.showCommand.Size = new System.Drawing.Size(335, 20);
-            this.showCommand.TabIndex = 20;
             // 
             // label6
             // 
@@ -297,11 +272,36 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Command output:";
             // 
+            // _output
+            // 
+            this._output.Location = new System.Drawing.Point(6, 19);
+            this._output.Name = "_output";
+            this._output.Size = new System.Drawing.Size(420, 200);
+            this._output.TabIndex = 0;
+            this._output.Text = "";
+            // 
+            // showCommand
+            // 
+            this.showCommand.Location = new System.Drawing.Point(6, 238);
+            this.showCommand.Name = "showCommand";
+            this.showCommand.Size = new System.Drawing.Size(420, 20);
+            this.showCommand.TabIndex = 20;
+            // 
+            // clear
+            // 
+            this.clear.Location = new System.Drawing.Point(369, 526);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(75, 23);
+            this.clear.TabIndex = 19;
+            this.clear.Text = "Clear output";
+            this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
+            // 
             // kompigui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 562);
+            this.ClientSize = new System.Drawing.Size(456, 562);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
