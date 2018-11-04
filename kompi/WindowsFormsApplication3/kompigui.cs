@@ -57,9 +57,12 @@ namespace WindowsFormsApplication3
         private void button3_Click(object sender, EventArgs e)
         {
             //strCmdText /k cmd kalır, /c işlem bitince kapanır
-            //string strCmdText;
             string dirdes1 = dirdes.Text;
-            //strCmdText = "/k compact /c /s /a /i /exe:lzx '" + dirdes1 + " *'";
+            string strCmdText;
+            string locationAddress;
+            //strCmdText = "/C compact /c /s /a /i /exe:lzx '" + dirdes1 + " *'";
+            strCmdText = "/C compact /c /s /a /i /exe:lzx *";
+            locationAddress = (@"""" + dirdes1 + @"""");
             //System.Diagnostics.Process.Start("CMD.exe", strCmdText);
 
             //System.Diagnostics.Process process = new System.Diagnostics.Process();
@@ -71,18 +74,20 @@ namespace WindowsFormsApplication3
             //process.Start();
             //_output.Text = process.StandardOutput.ReadToEnd();
 
-            
+
             Process lzx = new Process();
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             lzx.StartInfo.FileName = "cmd.exe";
             lzx.StartInfo.UseShellExecute = false;
-            lzx.StartInfo.Arguments = "/C compact /c /s /a /i /exe:lzx '" + dirdes1 + " *'";
+            //lzx.StartInfo.WorkingDirectory = @dirdes1;
+            lzx.StartInfo.Arguments = "/C" + "cd " + locationAddress;
+            lzx.StartInfo.Arguments = strCmdText;
             lzx.StartInfo.RedirectStandardOutput = true;
             lzx.Start();
             _output.Text = lzx.StandardOutput.ReadToEnd();
-            
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

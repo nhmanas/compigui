@@ -148,6 +148,11 @@ namespace WindowsFormsApplication3
             frm.Show();
         }
 
-
+        private void button3_Click(object sender, EventArgs e)
+        {
+            kompigui frm = new kompigui();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
