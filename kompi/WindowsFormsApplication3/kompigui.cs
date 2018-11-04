@@ -60,9 +60,12 @@ namespace WindowsFormsApplication3
             string dirdes1 = dirdes.Text;
             string strCmdText;
             string locationAddress;
-            //strCmdText = "/C compact /c /s /a /i /exe:lzx '" + dirdes1 + " *'";
-            strCmdText = "/C compact /c /s /a /i /exe:lzx *";
-            locationAddress = (@"""" + dirdes1 + @"""");
+            string cdCommand;
+            string doCompress;
+            locationAddress = dirdes1;
+            cdCommand  = "/C " + "cd " + locationAddress;
+            strCmdText = "compact /c /s /a /i /exe:lzx";
+            doCompress = "/C " + strCmdText + " *";
             //System.Diagnostics.Process.Start("CMD.exe", strCmdText);
 
             //System.Diagnostics.Process process = new System.Diagnostics.Process();
@@ -81,12 +84,12 @@ namespace WindowsFormsApplication3
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             lzx.StartInfo.FileName = "cmd.exe";
             lzx.StartInfo.UseShellExecute = false;
-            //lzx.StartInfo.WorkingDirectory = @dirdes1;
-            lzx.StartInfo.Arguments = "/C" + "cd " + locationAddress;
-            lzx.StartInfo.Arguments = strCmdText;
+            lzx.StartInfo.WorkingDirectory = @locationAddress;
+            lzx.StartInfo.Arguments = doCompress;
             lzx.StartInfo.RedirectStandardOutput = true;
             lzx.Start();
             _output.Text = lzx.StandardOutput.ReadToEnd();
+            showCommand.Text = doCompress;
 
         }
 

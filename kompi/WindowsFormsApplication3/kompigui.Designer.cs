@@ -49,6 +49,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this._output = new System.Windows.Forms.RichTextBox();
             this.clear = new System.Windows.Forms.Button();
+            this.showCommand = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -68,7 +70,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 481);
+            this.button1.Location = new System.Drawing.Point(12, 526);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -122,7 +124,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 32);
+            this.textBox1.Location = new System.Drawing.Point(9, 70);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(257, 20);
             this.textBox1.TabIndex = 6;
@@ -138,7 +140,7 @@
             // 
             // dirdes
             // 
-            this.dirdes.Location = new System.Drawing.Point(9, 71);
+            this.dirdes.Location = new System.Drawing.Point(9, 32);
             this.dirdes.Name = "dirdes";
             this.dirdes.Size = new System.Drawing.Size(257, 20);
             this.dirdes.TabIndex = 8;
@@ -251,10 +253,12 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this._output);
+            this.groupBox3.Controls.Add(this.showCommand);
             this.groupBox3.Location = new System.Drawing.Point(12, 250);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(347, 225);
+            this.groupBox3.Size = new System.Drawing.Size(347, 270);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Output";
@@ -269,7 +273,7 @@
             // 
             // clear
             // 
-            this.clear.Location = new System.Drawing.Point(284, 481);
+            this.clear.Location = new System.Drawing.Point(284, 526);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(75, 23);
             this.clear.TabIndex = 19;
@@ -277,11 +281,27 @@
             this.clear.UseVisualStyleBackColor = true;
             this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
+            // showCommand
+            // 
+            this.showCommand.Location = new System.Drawing.Point(6, 238);
+            this.showCommand.Name = "showCommand";
+            this.showCommand.Size = new System.Drawing.Size(335, 20);
+            this.showCommand.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 222);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Command output:";
+            // 
             // kompigui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 516);
+            this.ClientSize = new System.Drawing.Size(371, 562);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -302,6 +322,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +351,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RichTextBox _output;
         private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.TextBox showCommand;
+        private System.Windows.Forms.Label label6;
     }
 }
