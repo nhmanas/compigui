@@ -3,8 +3,11 @@
 <html>
 <head>
 	<title>Welcome to Kompi Family</title>
-	
+
+	<link rel="stylesheet" href="login.css">
+
 </head>
+
 <body>
 		<h2>Login</h2>
 		<form method="post" action="login.php">
