@@ -15,7 +15,7 @@
 <body>
 		<?php  if (isset($_SESSION['username'])) : ?>
 		<?php 
-		$cnt=mysqli_num_rows(mysqli_query($db, "select * from selling where name='$username'"));
+		$cnt=mysqli_num_rows(mysqli_query($db, "select * from users where username='$username' AND pay='p'"));
 		if($cnt>0){ 
 		echo "You have already payed.You don't need to buy again :) ";}
 		?>

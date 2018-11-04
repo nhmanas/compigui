@@ -44,7 +44,7 @@
 			<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
 			<?php 
 			$username=$_SESSION['username'];
-		$cnt=mysqli_num_rows(mysqli_query($db, "select * from selling where name='$username'"));
+		$cnt=mysqli_num_rows(mysqli_query($db, "select * from users where username='$username' AND pay='p'"));
 		if($cnt>0){ 
 		echo "You have access to program. Your payment has been done. ";}
 		?>
