@@ -33,14 +33,6 @@ namespace WindowsFormsApplication3
             this.Close();
         }
 
-        private void execute_Click(object sender, EventArgs e)
-        {
-            string strCmdText;
-            string destination = textBox1.Text;
-            strCmdText = "/C compact /c /s /a /i /exe:lzx " + destination + "'";
-            System.Diagnostics.Process.Start("CMD.exe", strCmdText);
-        }
-
         private void kompigui_Load(object sender, EventArgs e)
         {
             //DRIVE TARAMA
@@ -90,7 +82,7 @@ namespace WindowsFormsApplication3
             lzx.Start();
             _output.Text = lzx.StandardOutput.ReadToEnd();
             showCommand.Text = doCompress;
-
+            showDirectory.Text = locationAddress;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -148,6 +140,8 @@ namespace WindowsFormsApplication3
         private void clear_Click(object sender, EventArgs e)
         {
             _output.Text = "";
+            showDirectory.Text = "";
+            showCommand.Text = "";
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
