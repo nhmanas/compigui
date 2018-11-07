@@ -19,7 +19,7 @@ namespace WindowsFormsApplication3
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-
+            browser.ScriptErrorsSuppressed = true;
         }
 
         private void panel_Load(object sender, EventArgs e)
