@@ -45,6 +45,7 @@
 			<h4>You can control everything here.</h4>
 			<p> <a href="comments.php" style="color: blue;">Read the comments</a> </p>
 			<p> <a href="usercontrolpanel.php" style="color: blue;">User control panel</a> </p>
+			<p> <a href="https://cpanel.epizy.com/" style="color: blue;" target="_blank">C-Panel</a> </p>
 			<p> <a href="payments.php" style="color: blue;">Payments</a> </p>
 			<p> <a href="changepass2.php" style="color: blue;">Change your password</a> </p>
 			<p> <a href="admin.php?logout='1'" style="color: red;">logout</a> </p>
