@@ -60,7 +60,7 @@
 		<?php endif ?>
 		
 			<p> <a href="payment.php" style="color: blue;">Payment</a> </p>
-			<p> <a href="changepass1.php" style="color: blue;">Change your password</a> </p>
+			<p> <a href="changepass1.php" style="color: blue;">Account Settings</a> </p>
 			<p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
 		<?php endif ?>
 		

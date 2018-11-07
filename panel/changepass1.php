@@ -30,8 +30,10 @@
 			
 		<?php endif ?>
 		<?php  if (isset($_SESSION['username'])) : ?>
-        <h1>Change password</h1>
-        <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+		<p ><h2>Welcome to your account settings <strong><?php echo $_SESSION['username']; ?></strong></h2></p>
+        <hr>
+		<h3>Change password</h3>
+        
         <form action="" method="post">
          <?php include('errors.php'); ?>
             <p>
@@ -54,8 +56,28 @@
             <p>
                 <button type="submit"  name="change_password">Change Password</button>	
             </p>
-             
+			<hr>
+             <h3>Delete your account</h3>
+			 <?php  if (count($errors2) > 0) : ?>
+	
+		<?php foreach ($errors2 as $error2) : ?>
+			<p><?php echo $error2 ?></p>
+		<?php endforeach ?>
+	
+<?php  endif ?>
+			  <p>
+                <label for="current_password">Your current password</label>
+                <br/>
+                <input type="password" name="current_password2" id="current_password2" />
+				<p>
+                <button type="submit"  name="deleteacc">Delete</button>	
+            </p>
+            </p>
+			 
         </form>
+		<hr>
+		
+		
 		<p> <a href="index.php" style="color: blue;">Back</a> </p>
 		<p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
 		<?php endif ?>

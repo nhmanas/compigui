@@ -2,12 +2,14 @@
 
 $username=$_SESSION['username'];
 $errors = array();
+$errors2 = array();
 $db = mysqli_connect('45.61.159.32', 'G3i5MrhORu', 'g89aY6ueL4', 'G3i5MrhORu');
 
 	if (isset($_POST['change_password'])) {
 		$password_1 = mysqli_real_escape_string($db, $_POST['current_password']);
 		$password_2 = mysqli_real_escape_string($db, $_POST['new_password']);
 		$password_3 = mysqli_real_escape_string($db, $_POST['confirm_password']);
+		
 	
 		if (empty($password_1)) { array_push($errors, "Password is required"); }
 		if (empty($password_2)) { array_push($errors, "New password is required"); }
@@ -30,5 +32,26 @@ $db = mysqli_connect('45.61.159.32', 'G3i5MrhORu', 'g89aY6ueL4', 'G3i5MrhORu');
 				echo "Error updating record: " . mysqli_error($db);
 			}
 		}
+	}
+	if (isset($_POST['deleteacc'])) {
+		$password_4 = mysqli_real_escape_string($db, $_POST['current_password2']);
+		if (empty($password_4)) { array_push($errors2, "Password is required"); }
+		$passwordx=md5($password_4);
+		$resultsx = mysqli_query($db, "SELECT * FROM users WHERE username='$username' AND password='$passwordx'");
+		if (mysqli_num_rows($resultsx) != 1) { array_push($errors2, "Password is wrong."); }
+		if (count($errors2) == 0) {
+			
+			if(mysqli_query($db,"DELETE FROM users WHERE username='$username'")){
+				echo "Your account has been deleted successfully";
+				session_destroy();
+				unset($_SESSION['username']);
+				header("location: login.php");
+				
+			}
+			else{
+				echo "Error. Contact with admin.";
+			}
+		}
+		
 	}
 ?>
