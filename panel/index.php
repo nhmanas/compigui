@@ -3,14 +3,14 @@
 
 	if (!isset($_SESSION['username'])) {
 		$_SESSION['msg'] = "You must log in first";
-		header('location: login.php');
+		header('location: home.php');
 	}
 	
 
 	if (isset($_GET['logout'])) {
 		session_destroy();
 		unset($_SESSION['username']);
-		header("location: login.php");
+		header("location: home.php");
 	}
 
 ?>
@@ -20,12 +20,13 @@
 <head>
 	<title>Home</title>
 	
+	
 </head>
 <body>
 	
 		<h2>Home Page</h2>
 	
-	
+	<hr>
 
 		
 		<?php if (isset($_SESSION['success'])) : ?>
@@ -51,12 +52,15 @@
 		}
 		?>
 		<?php if(isset($_SESSION['successpay'])): ?>
+		<hr>
 		<h4>
 					<?php 
 						echo $_SESSION['successpay']; 
 					?>
 				</h4>
+		
 		<p> <a href="download.php" style="color: blue;">Download</a> </p>
+		<hr>
 		<?php endif ?>
 		
 			<p> <a href="payment.php" style="color: blue;">Payment</a> </p>

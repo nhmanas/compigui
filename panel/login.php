@@ -5,6 +5,9 @@
 	<title>Welcome to Kompi Family</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" >
 <style>
+body{
+	background-color:black;
+}
 .video-container {
   position: absolute;
   top: 0;

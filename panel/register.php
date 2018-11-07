@@ -3,10 +3,29 @@
 <html>
 <head>
 	<title>Become a member of Kompi</title>
-	
+	<style>
+	div.transbox {
+	text-align: center;
+	padding: 30px;
+	width:250px;
+  height:500px;
+  margin: auto;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.7;
+  filter: alpha(opacity=60); 
+  
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+</style>
 </head>
 <body>
-	
+	<div align="center" class="transbox"> 
+	<!--<link rel="stylesheet" type="text/css" href="login.css" />-->
 		<h2>Register</h2>
 	
 	
@@ -42,6 +61,8 @@
 		<p>
 			Already a member? <a href="login.php">Sign in</a>
 		</p>
+		
 	</form>
+	</div>
 </body>
 </html>

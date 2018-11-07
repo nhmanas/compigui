@@ -3,7 +3,7 @@
 
 	if (!isset($_SESSION['admin'])) {
 		$_SESSION['msg'] = "You must log in first";
-		header('location: login.php');
+		header('location: home.php');
 	}
 ?>
 <!DOCTYPE html>

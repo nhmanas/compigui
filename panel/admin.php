@@ -3,14 +3,14 @@
 
 	if (!isset($_SESSION['admin'])) {
 		$_SESSION['msg'] = "You must log in first";
-		header('location: login.php');
+		header('location: home.php');
 	}
 	
 
 	if (isset($_GET['logout'])) {
 		session_destroy();
 		unset($_SESSION['admin']);
-		header("location: login.php");
+		header("location: home.php");
 	}
 
 ?>
