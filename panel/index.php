@@ -46,12 +46,24 @@
 			$username=$_SESSION['username'];
 		$cnt=mysqli_num_rows(mysqli_query($db, "select * from users where username='$username' AND pay='p'"));
 		if($cnt>0){ 
-		echo "You have access to program. Your payment has been done. ";}
+		echo "You have access to program. Your payment has been done. </br>";
+		$_SESSION['successpay'] = "You can download now.";
+		}
 		?>
+		<?php if(isset($_SESSION['successpay'])): ?>
+		<h4>
+					<?php 
+						echo $_SESSION['successpay']; 
+					?>
+				</h4>
+		<p> <a href="download.php" style="color: blue;">Download</a> </p>
+		<?php endif ?>
+		
 			<p> <a href="payment.php" style="color: blue;">Payment</a> </p>
 			<p> <a href="changepass1.php" style="color: blue;">Change your password</a> </p>
 			<p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
 		<?php endif ?>
+		
 	
 		
 </body>
