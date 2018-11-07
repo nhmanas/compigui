@@ -43,7 +43,7 @@
 			<p>Welcome <strong><?php echo $_SESSION['admin']; ?></strong></p>
 			
 			<h4>You can control everything here.</h4>
-			
+			<p> <a href="comments.php" style="color: blue;">Read the comments</a> </p>
 			<p> <a href="usercontrolpanel.php" style="color: blue;">User control panel</a> </p>
 			<p> <a href="payments.php" style="color: blue;">Payments</a> </p>
 			<p> <a href="changepass2.php" style="color: blue;">Change your password</a> </p>

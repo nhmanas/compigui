@@ -65,7 +65,7 @@ div.transbox p {
 </br></br></br></br>
 	<div align="center" class="transbox"> 
 <font ><h2>Login</h2></font>
-		<form method="get" action="login.php">
+		<form method="post" action="login.php">
 		<?php include('errors.php'); ?>
 
 			<font ="white">Username:</font></br>
