@@ -82,5 +82,13 @@
 		<p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
 		<?php endif ?>
          
+		<a href="contact.php" style="color:gray;" target="_blank">Contact Us</a>
+-
+<a href="news.php" style="color:gray; " target="_blank">Latest News</a>
+-
+<a href="support.php" style="color:gray;" target="_blank">Support</a>
+<h5>
+Copyright © 2018 KompiCompany. All rights reserved.
+</h5>
     </body>
 </html>

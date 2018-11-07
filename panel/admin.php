@@ -23,7 +23,7 @@
 <body>
 	
 		<h2>Admin Panel</h2>
-	
+	<hr>
 	
 
 		

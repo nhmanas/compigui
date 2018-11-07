@@ -64,5 +64,14 @@ div.transbox p {
 		
 	</form>
 	</div>
+	
+		<a href="contact.php" style="color:gray;" target="_blank">Contact Us</a>
+-
+<a href="news.php" style="color:gray; " target="_blank">Latest News</a>
+-
+<a href="support.php" style="color:gray;" target="_blank">Support</a>
+<h5>
+Copyright © 2018 KompiCompany. All rights reserved.
+</h5>
 </body>
 </html>
