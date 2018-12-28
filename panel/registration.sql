@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.1
 -- https://www.phpmyadmin.net/
 --
--- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 02 Kas 2018, 17:02:44
--- Sunucu sürümü: 5.7.23
--- PHP Sürümü: 7.2.10
+-- Anamakine: sql7.freesqldatabase.com
+-- Üretim Zamanı: 28 Ara 2018, 12:39:35
+-- Sunucu sürümü: 5.5.58-0ubuntu0.14.04.1
+-- PHP Sürümü: 7.0.32-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,30 +19,29 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Veritabanı: `registration`
+-- Veritabanı: `sql7271816`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `selling`
+-- Tablo için tablo yapısı `issues`
 --
 
-DROP TABLE IF EXISTS `selling`;
-CREATE TABLE IF NOT EXISTS `selling` (
-  `id` int(12) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `issues` (
+  `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `pay` char(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `email` varchar(100) NOT NULL,
+  `subject` varchar(100) NOT NULL,
+  `msg` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Tablo döküm verisi `selling`
+-- Tablo döküm verisi `issues`
 --
 
-INSERT INTO `selling` (`id`, `name`, `pay`) VALUES
-(1, 'user', 'p'),
-(2, 'admin', 'p');
+INSERT INTO `issues` (`id`, `name`, `email`, `subject`, `msg`) VALUES
+(1, 'bedir', 'bedir@bedir.com', 'password', 'helppp');
 
 -- --------------------------------------------------------
 
@@ -50,29 +49,56 @@ INSERT INTO `selling` (`id`, `name`, `pay`) VALUES
 -- Tablo için tablo yapısı `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `city` varchar(100) NOT NULL,
-  `bday` date NOT NULL,
+  `bday` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `level` int(11) NOT NULL DEFAULT '2',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+  `pay` varchar(1) NOT NULL DEFAULT 'd',
+  `level` int(1) NOT NULL DEFAULT '2'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Tablo döküm verisi `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `name`, `city`, `bday`, `email`, `password`, `level`) VALUES
-(1, 'admin', 'adminastrator', 'mersin', '1996-03-06', 'admin@admin.com', '21232f297a57a5a743894a0e4a801fc3', 1),
-(4, 'user', 'user', 'mersin', '1996-06-06', 'user@user.com', 'ee11cbb19052e40b07aac0ca060c23ee', 2),
-(6, 'deneme', 'deneme', 'deneme', '2018-10-30', 'deneme@gmail.com', '8f10d078b2799206cfe914b32cc6a5e9', 2),
-(7, 'ibo', 'iburamin', 'ibocity', '2018-11-02', 'ibocity@ibocity.com', 'ibo', 2);
-COMMIT;
+INSERT INTO `users` (`id`, `username`, `name`, `city`, `bday`, `email`, `password`, `pay`, `level`) VALUES
+(1, 'thonwhal', 'thonwhal', 'thonwhal', '6666-06-06', 'thonwhal@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 'p', 1),
+(2, 'admin', 'admin', 'admin', '1111-01-01', 'admin@admin.com', '480e609c2d808606528b8806366b58a4', 'd', 1);
+
+--
+-- Dökümü yapılmış tablolar için indeksler
+--
+
+--
+-- Tablo için indeksler `issues`
+--
+ALTER TABLE `issues`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
+--
+
+--
+-- Tablo için AUTO_INCREMENT değeri `issues`
+--
+ALTER TABLE `issues`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- Tablo için AUTO_INCREMENT değeri `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

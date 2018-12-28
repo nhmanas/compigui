@@ -8,8 +8,8 @@
 	$_SESSION['success'] = "";
 
 	
-	$db = mysqli_connect('45.61.159.32', 'G3i5MrhORu', 'g89aY6ueL4', 'G3i5MrhORu');
-
+	$db = mysqli_connect('sql7.freesqldatabase.com', 'sql7271816', 'vXcVpd6JZs', 'sql7271816');
+	
 	
 	if (isset($_POST['reg_user'])) {
 		
@@ -42,11 +42,13 @@
 			mysqli_query($db, $query);
 			
 			if($username == 'admin'){
+				mysqli_close($db);
 			$_SESSION['admin'] = $username;
 			$_SESSION['successadmin'] = "You are now logged in";
 			header('location: admin.php');
 			}
 			else{
+				mysqli_close($db);
 			$_SESSION['username'] =$name;
 			$_SESSION['success'] = "You are now logged in";
 			header('location: index.php');
@@ -79,7 +81,7 @@
 
 			if (mysqli_num_rows($results) == 1) {
 				if(mysqli_num_rows($resultquerry)==1){
-					 
+					 mysqli_close($db);
 					$_SESSION['admin'] = $username;
 					$_SESSION['successadmin'] = "You are now logged in";
 					header('location: admin.php');
@@ -87,6 +89,7 @@
 	}
 				
 				else{
+					mysqli_close($db);
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are now logged in";
 				header('location: index.php');

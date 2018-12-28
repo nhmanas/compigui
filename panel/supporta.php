@@ -4,7 +4,7 @@
 	$s_email= "";
 	$s_errors=array();
 	
-	$db = mysqli_connect('45.61.159.32', 'G3i5MrhORu', 'g89aY6ueL4', 'G3i5MrhORu');
+	$db = mysqli_connect('sql7.freesqldatabase.com', 'sql7271816', 'vXcVpd6JZs', 'sql7271816');
 	
 	if(isset($_POST['issue'])){
 		$s_name = mysqli_real_escape_string($db, $_POST['s_name']);
@@ -33,4 +33,5 @@
 			
 		}
 	}
+	mysqli_close($db);
 	?>

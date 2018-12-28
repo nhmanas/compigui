@@ -1,7 +1,8 @@
 <?php
 $username=$_SESSION['username'];
 $errors = array();
-$db = mysqli_connect('45.61.159.32', 'G3i5MrhORu', 'g89aY6ueL4', 'G3i5MrhORu');
+$db = mysqli_connect('sql7.freesqldatabase.com', 'sql7271816', 'vXcVpd6JZs', 'sql7271816');
+
 	if (isset($_POST['pay'])) {
 		$card1=$_POST['card1'];
 		$card2=$_POST['card2'];
@@ -42,4 +43,5 @@ $db = mysqli_connect('45.61.159.32', 'G3i5MrhORu', 'g89aY6ueL4', 'G3i5MrhORu');
 					
 		}
 	}
+	mysqli_close($db);
 ?>

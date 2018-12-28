@@ -44,12 +44,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.showDirectory = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this._output = new System.Windows.Forms.RichTextBox();
             this.showCommand = new System.Windows.Forms.TextBox();
             this.clear = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.showDirectory = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -118,6 +118,7 @@
             this.dirdes.Name = "dirdes";
             this.dirdes.Size = new System.Drawing.Size(342, 20);
             this.dirdes.TabIndex = 8;
+            this.dirdes.TextChanged += new System.EventHandler(this.dirdes_TextChanged);
             // 
             // button2
             // 
@@ -146,6 +147,7 @@
             this.comboBox1.Size = new System.Drawing.Size(342, 21);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.Text = "Select time interval";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -236,6 +238,22 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Output";
             // 
+            // showDirectory
+            // 
+            this.showDirectory.Location = new System.Drawing.Point(6, 238);
+            this.showDirectory.Name = "showDirectory";
+            this.showDirectory.Size = new System.Drawing.Size(420, 20);
+            this.showDirectory.TabIndex = 22;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 222);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 13);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Work directory:";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -269,22 +287,6 @@
             this.clear.Text = "Clear output";
             this.clear.UseVisualStyleBackColor = true;
             this.clear.Click += new System.EventHandler(this.clear_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 222);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 13);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Work directory:";
-            // 
-            // showDirectory
-            // 
-            this.showDirectory.Location = new System.Drawing.Point(6, 238);
-            this.showDirectory.Name = "showDirectory";
-            this.showDirectory.Size = new System.Drawing.Size(420, 20);
-            this.showDirectory.TabIndex = 22;
             // 
             // kompigui
             // 

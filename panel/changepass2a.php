@@ -2,7 +2,8 @@
 
 $username=$_SESSION['admin'];
 $errors = array();
-$db = mysqli_connect('45.61.159.32', 'G3i5MrhORu', 'g89aY6ueL4', 'G3i5MrhORu');
+$db = mysqli_connect('sql7.freesqldatabase.com', 'sql7271816', 'vXcVpd6JZs', 'sql7271816');
+
 
 	if (isset($_POST['change_password'])) {
 		$password_1 = mysqli_real_escape_string($db, $_POST['current_password']);
@@ -31,4 +32,5 @@ $db = mysqli_connect('45.61.159.32', 'G3i5MrhORu', 'g89aY6ueL4', 'G3i5MrhORu');
 			}
 		}
 	}
+	mysqli_close($db);
 ?>

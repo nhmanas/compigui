@@ -25,6 +25,7 @@
 <body>
 		<?php  if (isset($_SESSION['username'])) : ?>
 		<?php 
+		$db = mysqli_connect('sql7.freesqldatabase.com', 'sql7271816', 'vXcVpd6JZs', 'sql7271816');
 		$cnt=mysqli_num_rows(mysqli_query($db, "select * from users where username='$username' AND pay='p'"));
 		if($cnt>0){ 
 		echo "You have already payed.You don't need to buy again :) ";}
@@ -60,5 +61,6 @@
 <h5>
 Copyright © 2018 KompiCompany. All rights reserved.
 </h5>
+<?php mysqli_close($db) ?>
 </body>
 </html>

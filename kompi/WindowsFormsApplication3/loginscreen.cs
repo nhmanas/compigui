@@ -19,11 +19,11 @@ namespace WindowsFormsApplication3
 
 
 
-        private static string sIp = "45.61.159.32";
+        private static string sIp = "sql7.freesqldatabase.com";
         private static string sPt = "3306";
-        private static string sDB = "G3i5MrhORu";
-        private static string sKA = "G3i5MrhORu";
-        private static string sSifre = "g89aY6ueL4";
+        private static string sDB = "sql7271816";
+        private static string sKA = "sql7271816";
+        private static string sSifre = "vXcVpd6JZs";
         public MySqlConnection mysqlbaglan = new MySqlConnection("Server=" + sIp + ";Port=" + sPt + ";Database=" + sDB + ";Uid=" + sKA + ";Pwd='" + sSifre + "';");
         public static string MD5(string metin)
         {

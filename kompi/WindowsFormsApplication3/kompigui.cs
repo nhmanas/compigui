@@ -35,6 +35,7 @@ namespace WindowsFormsApplication3
 
         private void kompigui_Load(object sender, EventArgs e)
         {
+            
             //DRIVE TARAMA
             foreach (var Drives in Environment.GetLogicalDrives())
             {
@@ -58,6 +59,10 @@ namespace WindowsFormsApplication3
             cdCommand  = "/C " + "cd " + locationAddress;
             strCmdText = "compact /c /s /a /i /exe:lzx";
             doCompress = "/C " + strCmdText + " *";
+    
+
+            
+      
             //System.Diagnostics.Process.Start("CMD.exe", strCmdText);
 
             //System.Diagnostics.Process process = new System.Diagnostics.Process();
@@ -145,6 +150,16 @@ namespace WindowsFormsApplication3
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dirdes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

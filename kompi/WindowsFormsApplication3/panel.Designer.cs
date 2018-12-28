@@ -39,7 +39,7 @@
             this.browser.Name = "browser";
             this.browser.Size = new System.Drawing.Size(800, 450);
             this.browser.TabIndex = 0;
-            this.browser.Url = new System.Uri("http://www.kompi.rf.gd/", System.UriKind.Absolute);
+            this.browser.Url = new System.Uri("http://www.kompi.rf.gd/login.php", System.UriKind.Absolute);
             this.browser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // panel

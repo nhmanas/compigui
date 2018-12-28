@@ -7,7 +7,8 @@
 	}
 ?>
 <!DOCTYPE html>
-<?php $db = mysqli_connect('45.61.159.32', 'G3i5MrhORu', 'g89aY6ueL4', 'G3i5MrhORu'); ?>
+<?php $db = mysqli_connect('sql7.freesqldatabase.com', 'sql7271816', 'vXcVpd6JZs', 'sql7271816');
+ ?>
 <html>
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -62,7 +63,7 @@
  
 }
 
-	
+	mysqli_close($db);
 ?>
 
 </body>
