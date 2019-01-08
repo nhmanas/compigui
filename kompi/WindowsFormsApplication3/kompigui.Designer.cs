@@ -50,6 +50,10 @@
             this._output = new System.Windows.Forms.RichTextBox();
             this.showCommand = new System.Windows.Forms.TextBox();
             this.clear = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -69,7 +73,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 526);
+            this.button1.Location = new System.Drawing.Point(12, 593);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -160,7 +164,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(357, 29);
+            this.button3.Location = new System.Drawing.Point(369, 213);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(69, 23);
             this.button3.TabIndex = 12;
@@ -198,8 +202,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.dirdes);
             this.groupBox1.Location = new System.Drawing.Point(12, 144);
             this.groupBox1.Name = "groupBox1";
@@ -231,7 +235,7 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this._output);
             this.groupBox3.Controls.Add(this.showCommand);
-            this.groupBox3.Location = new System.Drawing.Point(12, 213);
+            this.groupBox3.Location = new System.Drawing.Point(12, 280);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(432, 307);
             this.groupBox3.TabIndex = 18;
@@ -280,7 +284,7 @@
             // 
             // clear
             // 
-            this.clear.Location = new System.Drawing.Point(369, 526);
+            this.clear.Location = new System.Drawing.Point(369, 593);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(75, 23);
             this.clear.TabIndex = 19;
@@ -288,11 +292,37 @@
             this.clear.UseVisualStyleBackColor = true;
             this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(294, 213);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(69, 23);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "FILE";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(357, 30);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(69, 23);
+            this.button6.TabIndex = 21;
+            this.button6.Text = "Browse";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // kompigui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 562);
+            this.ClientSize = new System.Drawing.Size(456, 623);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -343,5 +373,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox showDirectory;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Button button6;
     }
 }

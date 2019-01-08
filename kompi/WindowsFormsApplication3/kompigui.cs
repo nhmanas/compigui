@@ -10,10 +10,13 @@ using System.IO;
 using System.Diagnostics;
 using System.Windows.Forms;
 
+
+
 namespace WindowsFormsApplication3
 {
     public partial class kompigui : Form
     {
+        string folderPath = "";
         public kompigui()
         {
             InitializeComponent();
@@ -156,12 +159,44 @@ namespace WindowsFormsApplication3
 
         private void dirdes_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            int size = -1;
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog1.FileName;
+                try
+                {
+                    string text = File.ReadAllText(file);
+                    size = text.Length;
+                }
+                catch (IOException)
+                {
+                }
+            }
+            Console.WriteLine(size); // <-- Shows file size in debugging mode.
+            Console.WriteLine(result); // <-- For debugging use.
+        }
+
+        public void button6_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                folderPath = folderBrowserDialog1.SelectedPath;
+            }
+            //MessageBox.Show(folderPath);
+            //konum deneme msg
+            dirdes.Text = folderPath;
         }
     }
 }
