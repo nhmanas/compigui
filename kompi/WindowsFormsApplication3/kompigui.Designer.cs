@@ -42,6 +42,10 @@
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.fdes = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -51,12 +55,8 @@
             this._output = new System.Windows.Forms.RichTextBox();
             this.showCommand = new System.Windows.Forms.TextBox();
             this.clear = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.fdes = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -141,19 +141,19 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Once in an hour",
-            "Once in 2 hours",
-            "Once in 3 hours",
-            "Once in 4 hours",
-            "Once in 5 hours",
-            "Once in 10 hours",
-            "Twice a day",
-            "Once a day"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "10",
+            "12",
+            "24"});
             this.comboBox1.Location = new System.Drawing.Point(9, 72);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(342, 21);
             this.comboBox1.TabIndex = 10;
-            this.comboBox1.Text = "Select time interval";
+            this.comboBox1.Text = "Select time interval -hours-";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
@@ -220,6 +220,41 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Manual Compression";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Destination of a file to compress:";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(357, 69);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(69, 23);
+            this.button7.TabIndex = 20;
+            this.button7.Text = "Execute";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // fdes
+            // 
+            this.fdes.Location = new System.Drawing.Point(9, 71);
+            this.fdes.Name = "fdes";
+            this.fdes.Size = new System.Drawing.Size(267, 20);
+            this.fdes.TabIndex = 22;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(282, 69);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(69, 23);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "Browse";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button6
             // 
@@ -310,44 +345,9 @@
             this.clear.UseVisualStyleBackColor = true;
             this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(282, 69);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(69, 23);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Browse";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "Select a file";
-            // 
-            // fdes
-            // 
-            this.fdes.Location = new System.Drawing.Point(9, 71);
-            this.fdes.Name = "fdes";
-            this.fdes.Size = new System.Drawing.Size(267, 20);
-            this.fdes.TabIndex = 22;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(357, 69);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(69, 23);
-            this.button7.TabIndex = 20;
-            this.button7.Text = "Execute";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 55);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 13);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Destination of a file to compress:";
             // 
             // kompigui
             // 

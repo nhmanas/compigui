@@ -154,10 +154,54 @@ namespace WindowsFormsApplication3
             }
 
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        async Task PutTaskDelay()
         {
+            int second = 1000;
+            int minute = 60 * second;
+            int hour = 60 * minute;
+            int time = Int32.Parse(comboBox1.Text) * hour;
+            MessageBox.Show("Timer has set to " + comboBox1.Text + 
+                " hour(s)\nCompression will be done for your desired drive every " + comboBox1.Text + " hour(s)");
+            await Task.Delay(time);
+        }
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            string strCmdText;
+            string cdCommand;
+            string doCompress;
+            string wait;
+            wait = comboBox1.Text;
+            if (comboBox1.Text == "Select time interval -hours-" || comboBox7.Text == "Select disk")
+            {
+                MessageBox.Show("Invalid selection\nYou must select a disk and time interval for this operation");
+            }
+            else
+            {
+                int x = 1;
+                while(x == 1)
+                {
+                    await PutTaskDelay();
 
+                    cdCommand = "/C " + "cd " + comboBox7.Text;
+                    strCmdText = "compact /c /s /a /i /exe:lzx";
+                    doCompress = "/C " + strCmdText + " *";
+
+                    Process lzx = new Process();
+                    System.Diagnostics.Process process = new System.Diagnostics.Process();
+                    System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                    startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                    lzx.StartInfo.FileName = "cmd.exe";
+                    lzx.StartInfo.UseShellExecute = false;
+                    lzx.StartInfo.WorkingDirectory = comboBox7.Text;
+                    lzx.StartInfo.Arguments = doCompress;
+                    lzx.StartInfo.RedirectStandardOutput = true;
+                    lzx.Start();
+
+                    _output.Text = lzx.StandardOutput.ReadToEnd();
+                    showCommand.Text = doCompress;
+                    showDirectory.Text = comboBox7.Text;
+                }
+            }
         }
 
         private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
