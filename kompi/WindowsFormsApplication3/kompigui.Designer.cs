@@ -42,6 +42,7 @@
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.showDirectory = new System.Windows.Forms.TextBox();
@@ -53,7 +54,9 @@
             this.button5 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.button6 = new System.Windows.Forms.Button();
+            this.fdes = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -73,7 +76,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 593);
+            this.button1.Location = new System.Drawing.Point(12, 564);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -120,7 +123,7 @@
             // 
             this.dirdes.Location = new System.Drawing.Point(9, 32);
             this.dirdes.Name = "dirdes";
-            this.dirdes.Size = new System.Drawing.Size(342, 20);
+            this.dirdes.Size = new System.Drawing.Size(267, 20);
             this.dirdes.TabIndex = 8;
             this.dirdes.TextChanged += new System.EventHandler(this.dirdes_TextChanged);
             // 
@@ -164,7 +167,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(369, 213);
+            this.button3.Location = new System.Drawing.Point(357, 30);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(69, 23);
             this.button3.TabIndex = 12;
@@ -202,16 +205,31 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.fdes);
+            this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dirdes);
             this.groupBox1.Location = new System.Drawing.Point(12, 144);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(432, 63);
+            this.groupBox1.Size = new System.Drawing.Size(432, 101);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Manual Compression";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(282, 30);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(69, 23);
+            this.button6.TabIndex = 21;
+            this.button6.Text = "Browse";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // groupBox2
             // 
@@ -235,7 +253,7 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this._output);
             this.groupBox3.Controls.Add(this.showCommand);
-            this.groupBox3.Location = new System.Drawing.Point(12, 280);
+            this.groupBox3.Location = new System.Drawing.Point(12, 251);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(432, 307);
             this.groupBox3.TabIndex = 18;
@@ -284,7 +302,7 @@
             // 
             // clear
             // 
-            this.clear.Location = new System.Drawing.Point(369, 593);
+            this.clear.Location = new System.Drawing.Point(369, 564);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(75, 23);
             this.clear.TabIndex = 19;
@@ -294,35 +312,48 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(294, 213);
+            this.button5.Location = new System.Drawing.Point(282, 69);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(69, 23);
             this.button5.TabIndex = 20;
-            this.button5.Text = "FILE";
+            this.button5.Text = "Browse";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileName = "Select a file";
             // 
-            // button6
+            // fdes
             // 
-            this.button6.Location = new System.Drawing.Point(357, 30);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(69, 23);
-            this.button6.TabIndex = 21;
-            this.button6.Text = "Browse";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.fdes.Location = new System.Drawing.Point(9, 71);
+            this.fdes.Name = "fdes";
+            this.fdes.Size = new System.Drawing.Size(267, 20);
+            this.fdes.TabIndex = 22;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(357, 69);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(69, 23);
+            this.button7.TabIndex = 20;
+            this.button7.Text = "Execute";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Destination of a file to compress:";
             // 
             // kompigui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 623);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button5);
+            this.ClientSize = new System.Drawing.Size(456, 599);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -377,5 +408,8 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox fdes;
     }
 }

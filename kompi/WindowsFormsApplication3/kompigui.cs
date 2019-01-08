@@ -124,6 +124,35 @@ namespace WindowsFormsApplication3
             comboBox7.DisplayMember = "Name";
             */
 
+            if (comboBox7.Text == "Select disk")
+            {
+                MessageBox.Show("Please select a disk first");
+            }
+            else
+            {
+                string strCmdText;
+                string cdCommand;
+                string doCompress;
+                cdCommand = "/C " + "cd " + comboBox7.Text;
+                strCmdText = "compact /c /s /a /i /exe:lzx";
+                doCompress = "/C " + strCmdText + " *";
+
+                Process lzx = new Process();
+                System.Diagnostics.Process process = new System.Diagnostics.Process();
+                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                lzx.StartInfo.FileName = "cmd.exe";
+                lzx.StartInfo.UseShellExecute = false;
+                lzx.StartInfo.WorkingDirectory = comboBox7.Text;
+                lzx.StartInfo.Arguments = doCompress;
+                lzx.StartInfo.RedirectStandardOutput = true;
+                lzx.Start();
+
+                _output.Text = lzx.StandardOutput.ReadToEnd();
+                showCommand.Text = doCompress;
+                showDirectory.Text = comboBox7.Text;
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
