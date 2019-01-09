@@ -271,5 +271,26 @@ namespace WindowsFormsApplication3
             //konum deneme msg
             dirdes.Text = folderPath;
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            if (groupBox3.Visible == false)
+            {
+                groupBox3.Visible = true;
+                button5.Text = "<< Less details";
+                clear.Visible = true;
+            }
+            else
+            {
+                groupBox3.Visible = false;
+                button5.Text = "See details >>";
+                clear.Visible = false;
+            }
+        }
     }
 }

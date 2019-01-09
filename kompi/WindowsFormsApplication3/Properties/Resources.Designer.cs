@@ -83,6 +83,16 @@ namespace WindowsFormsApplication3.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap close {
+            get {
+                object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap close_button_png_23 {
             get {
                 object obj = ResourceManager.GetObject("close-button-png-23", resourceCulture);
@@ -96,6 +106,36 @@ namespace WindowsFormsApplication3.Properties {
         internal static System.Drawing.Bitmap close_button_png_231 {
             get {
                 object obj = ResourceManager.GetObject("close-button-png-231", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap kompi {
+            get {
+                object obj = ResourceManager.GetObject("kompi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap mini {
+            get {
+                object obj = ResourceManager.GetObject("mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap topmain {
+            get {
+                object obj = ResourceManager.GetObject("topmain", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
