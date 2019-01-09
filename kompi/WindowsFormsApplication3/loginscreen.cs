@@ -75,6 +75,7 @@ namespace WindowsFormsApplication3
         private void button1_Click(object sender, EventArgs e)
         {
             progressBar1.Visible = true;
+            button3.Visible = false;
             string user = textBox1.Text;
             string pass = textBox2.Text;
             
