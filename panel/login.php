@@ -43,11 +43,30 @@ body{
   left: 50%;
   transform: translate(-50%,-50%);
 }
+.text {
+	font-family:arial,sans-serif;
+	font-size: 16px;
+	color:black;
+	font-weight:bold;
+
+}
+input[type=text] {
+ 
+ border:  3px solid black;
+
+ 
+}
+input[type=password] {
+ 
+ border:  3px solid black;
+
+ 
+}
 div.transbox {
 	text-align: center;
 	padding: 30px;
 	width:250px;
-  height:220px;
+  height:320px;
   margin: auto;
   background-color: #ffffff;
   border: 1px solid black;
@@ -60,6 +79,33 @@ div.transbox p {
   margin: 5%;
   font-weight: bold;
   color: #000000;
+}
+.formbutton {
+	background-color: black;
+    border: none;
+    color: red;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 3px 1px;
+	cursor: pointer;
+	border-radius: 14px;
+	font-family:arial,sans-serif;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+
+}
+.header {
+	font-family:arial,sans-serif;
+	font-weight:bold;
+	font-size: 40px;
+	color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
 </style>
 </head>
 <body>
@@ -72,17 +118,17 @@ div.transbox p {
 
 
 
-</br></br></br></br>
+</br></br></br></br></br>
 	<div align="center" class="transbox"> 
-<font ><h2>Login</h2></font>
+<font ><h2 class="header">Login</h2></font>
 		<form method="post" action="login.php">
 		<?php include('errors.php'); ?>
 
-			<font ="white">Username:</font></br>
+			<label class="text">Username:</label></br>
 			<input type="text" name="username" ></br>
-			<font >Password:</font></br>
+			<label class="text">Password:</label></br>
 			<input type="password" name="password"></br>
-			<button type="submit"  name="login_user">Login</button>		
+			<button type="submit"  name="login_user" class="formbutton">Login</button>		
 		<p>
 			<font >Not yet a member?</font></br> <a href="register.php">Sign up</a>
 			</br>
@@ -90,7 +136,7 @@ div.transbox p {
 		<link rel="stylesheet" type="text/css" href="login.css" />
 	</form>
 	</div>	
-	</br></br></br></br></br></br></br>
+	</br></br></br></br>
 		<a href="contact.php" style="color:gray;" target="_blank">Contact Us</a>
 -
 <a href="news.php" style="color:gray; " target="_blank">Latest News</a>

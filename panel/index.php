@@ -28,14 +28,14 @@
 
   gtag('config', 'UA-129052302-1');
 </script>
+<link rel="stylesheet" type="text/css" href="style.css">
 
 	<title>Home</title>
 	
-	
 </head>
 <body>
-	
-		<h2>Home Page</h2>
+        <div align="center" class="transbox">
+		<h2 class="header">Home Page</h2>
 	
 	<hr>
 
@@ -53,7 +53,7 @@
 
 		
 		<?php  if (isset($_SESSION['username'])) : ?>
-			<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+			<p class="header">Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
 			<?php 
 			$username=$_SESSION['username'];
 		$cnt=mysqli_num_rows(mysqli_query($db, "select * from users where username='$username' AND pay='p'"));
@@ -70,24 +70,38 @@
 					?>
 				</h4>
 		
-		<p> <a href="download.php" style="color: blue;">Download</a> </p>
+		<p class="text"> <a href="https://github.com/nhmanas/compigui" class="button"><span>Download</span></a> </p>
 		<hr>
 		<?php endif ?>
 		
-			<p> <a href="payment.php" style="color: blue;">Payment</a> </p>
-			<p> <a href="changepass1.php" style="color: blue;">Account Settings</a> </p>
-			<p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
+			<p class="text"> <a href="payment.php" class="button"><span>Payment</span></a> </p>
+			<p class="text"> <a href="changepass1.php" class="button"><span>Account Settings</span></a> </p>
+			<p class="text"> <a href="index.php?logout='1'" class="button"><span>Logout</span></a> </p>
 		<?php endif ?>
 		
-	</br></br></br>
+	<br><br>
 		<a href="contact.php" style="color:gray;" target="_blank">Contact Us</a>
 -
 <a href="news.php" style="color:gray; " target="_blank">Latest News</a>
 -
 <a href="support.php" style="color:gray;" target="_blank">Support</a>
-<h5>
+<h5 style="color:red;"><br><br>
 Copyright © 2018 KompiCompany. All rights reserved.
 </h5>
 <?php mysqli_close($db); ?>
+<style>
+   div.transbox {
+	text-align: center;
+	padding: 30px;
+	width:350px;
+    height:730px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.7;
+    filter: alpha(opacity=60); 
+  
+}
+	</style>
 </body>
 </html>

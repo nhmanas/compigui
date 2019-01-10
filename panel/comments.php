@@ -27,14 +27,16 @@
 
   gtag('config', 'UA-129052302-1');
 </script>
+<link rel="stylesheet" type="text/css" href="style.css">
 
 	<title>Comments</title>
 </head>
 <body>
+<div align="center" class="transbox">
 <form method="post" action="comments.php">
 Enter a comment if you answered it or if it is invalid:</br>
 <input type="text" name="c_id" >
-<input type="submit" name="c_delete" value="Delete">
+<input type="submit" class="buttonn" name="c_delete" value="Delete">
 <?php
 if (isset($_POST['c_delete'])) {
 $c_id = $_POST['c_id'];
@@ -57,7 +59,7 @@ else{
 }
 ?>
 </br>
-<p> <a href="admin.php" style="color: blue;">Back</a> </p>
+<p> <a href="admin.php" class="button"><span>Back</span></a> </p>
 <h2>Message List:</h2>
 <?php
 	$query="SELECT * FROM issues";
@@ -78,6 +80,36 @@ else{
 
 	mysqli_close($db);
 ?>
+
+<style>
+   div.transbox {
+	text-align: center;
+	padding: 30px;
+	width:350px;
+    height:562px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.7;
+    filter: alpha(opacity=60); 
+  
+}
+
+.buttonn {
+	background-color: black;
+    border: none;
+    color: red;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 14px;
+	font-family:arial,sans-serif;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	</style>
 
 </body>
 </html>
