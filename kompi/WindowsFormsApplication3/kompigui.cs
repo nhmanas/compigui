@@ -274,7 +274,8 @@ namespace WindowsFormsApplication3
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            
+            Hide();
+            notifyIcon1.Visible = true;
         }
 
         private void button5_Click_2(object sender, EventArgs e)
@@ -291,6 +292,23 @@ namespace WindowsFormsApplication3
                 button5.Text = "See details >>";
                 clear.Visible = false;
             }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("What is Kompi:\nKompi is a compression tool that compresses your files " +
+                "natively on NTFS filesystems.\n\nTo compress a disk or a directory please select one " +
+                "of them and click on apply button.\n\nFor timed compression, select time interval and" +
+                " disk then click on second apply button.\n\nPlease note that Kompi only works " +
+                "on Windows 10 2016 or later builds. If you don't have such build on your PC then " +
+                "please contact our support team for refund.");
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Show();
+            this.WindowState = FormWindowState.Normal;
+            notifyIcon1.Visible = false;
         }
     }
 }
