@@ -4,11 +4,6 @@ C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsAppl
 C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Properties.Resources.resources
 C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csproj.GenerateResource.cache
 C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csproj.CoreCompileInputs.cache
-C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
-C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
-C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
-C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
-C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
 C:\Users\thonwhal\Desktop\Yeni klasör\compigui\compigui\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
 C:\Users\thonwhal\Desktop\Yeni klasör\compigui\compigui\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
 C:\Users\thonwhal\Desktop\Yeni klasör\compigui\compigui\kompi\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
@@ -36,3 +31,13 @@ C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\o
 C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\obj\Debug\Kompi.csproj.GenerateResource.Cache
 C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
 C:\Users\thonwhal\Desktop\Yeni klasör\compigui\kompi\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\kompi.exe.config
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\kompi.exe
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\kompi.pdb
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\kompi.exe
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\kompi.pdb
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\kompi.exe.manifest
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\bin\Debug\kompi.application
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\kompi.TrustInfo.xml
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\kompi.exe.manifest
+C:\wamp64\www\compigui\kompi\WindowsFormsApplication3\obj\Debug\kompi.application
