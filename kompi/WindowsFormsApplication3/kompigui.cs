@@ -310,5 +310,62 @@ namespace WindowsFormsApplication3
             this.WindowState = FormWindowState.Normal;
             notifyIcon1.Visible = false;
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string strCmdText;
+            strCmdText = "/C Compact.exe /CompactOS:query";
+
+            Process lzx = new Process();
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            lzx.StartInfo.FileName = "cmd.exe";
+            lzx.StartInfo.UseShellExecute = false;
+            lzx.StartInfo.Arguments = strCmdText;
+            lzx.StartInfo.RedirectStandardOutput = true;
+            lzx.Start();
+            _output.Text = lzx.StandardOutput.ReadToEnd();
+            showCommand.Text = strCmdText;
+            MessageBox.Show(_output.Text);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string strCmdText;
+            strCmdText = "/C Compact.exe /CompactOS:always";
+
+            Process lzx = new Process();
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            lzx.StartInfo.FileName = "cmd.exe";
+            lzx.StartInfo.UseShellExecute = false;
+            lzx.StartInfo.Arguments = strCmdText;
+            lzx.StartInfo.RedirectStandardOutput = true;
+            lzx.Start();
+            _output.Text = lzx.StandardOutput.ReadToEnd();
+            showCommand.Text = strCmdText;
+            MessageBox.Show(_output.Text);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string strCmdText;
+            strCmdText = "/C Compact.exe /CompactOS:never";
+
+            Process lzx = new Process();
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            lzx.StartInfo.FileName = "cmd.exe";
+            lzx.StartInfo.UseShellExecute = false;
+            lzx.StartInfo.Arguments = strCmdText;
+            lzx.StartInfo.RedirectStandardOutput = true;
+            lzx.Start();
+            _output.Text = lzx.StandardOutput.ReadToEnd();
+            showCommand.Text = strCmdText;
+            MessageBox.Show(_output.Text);
+        }
     }
 }

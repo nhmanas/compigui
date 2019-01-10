@@ -60,6 +60,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -72,7 +76,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 521);
+            this.button1.Location = new System.Drawing.Point(12, 561);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -179,7 +183,7 @@
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dirdes);
-            this.groupBox1.Location = new System.Drawing.Point(12, 183);
+            this.groupBox1.Location = new System.Drawing.Point(12, 223);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(432, 65);
             this.groupBox1.TabIndex = 16;
@@ -199,6 +203,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button9);
+            this.groupBox2.Controls.Add(this.button7);
+            this.groupBox2.Controls.Add(this.button8);
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.comboBox7);
             this.groupBox2.Controls.Add(this.button2);
@@ -208,7 +216,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 71);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(432, 106);
+            this.groupBox2.Size = new System.Drawing.Size(432, 146);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Automatic Compression";
@@ -220,7 +228,7 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this._output);
             this.groupBox3.Controls.Add(this.showCommand);
-            this.groupBox3.Location = new System.Drawing.Point(12, 254);
+            this.groupBox3.Location = new System.Drawing.Point(12, 294);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(432, 261);
             this.groupBox3.TabIndex = 18;
@@ -271,7 +279,7 @@
             // 
             // clear
             // 
-            this.clear.Location = new System.Drawing.Point(274, 521);
+            this.clear.Location = new System.Drawing.Point(274, 561);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(75, 23);
             this.clear.TabIndex = 19;
@@ -296,7 +304,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(355, 521);
+            this.button5.Location = new System.Drawing.Point(355, 561);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(89, 23);
             this.button5.TabIndex = 22;
@@ -362,7 +370,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::WindowsFormsApplication3.Properties.Resources.kompi;
-            this.pictureBox4.Location = new System.Drawing.Point(17, 283);
+            this.pictureBox4.Location = new System.Drawing.Point(17, 323);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(432, 208);
             this.pictureBox4.TabIndex = 23;
@@ -374,11 +382,50 @@
             this.notifyIcon1.Text = "Kompi";
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 96);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(284, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Compress files when they written on your drive immediately:";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(9, 112);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(98, 23);
+            this.button8.TabIndex = 28;
+            this.button8.Text = "Check state";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(282, 112);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(69, 23);
+            this.button7.TabIndex = 29;
+            this.button7.Text = "Turn on";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(357, 112);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(69, 23);
+            this.button9.TabIndex = 30;
+            this.button9.Text = "Turn off";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // kompigui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 558);
+            this.ClientSize = new System.Drawing.Size(456, 595);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
@@ -444,5 +491,9 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label7;
     }
 }
