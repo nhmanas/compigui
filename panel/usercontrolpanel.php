@@ -20,15 +20,17 @@
 
   gtag('config', 'UA-129052302-1');
 </script>
+<link rel="stylesheet" type="text/css" href="style.css">
 
 	<title>User Control Panel</title>
 	
 </head>
 <body>
+<div align="center" class="transbox">
 <form method="post" action="usercontrolpanel.php">
 Enter an id if you want to delete an account:</br>
 <input type="text" name="id" >
-<input type="submit" name="delete" value="Delete">
+<input type="submit" class="buttonn" name="delete" value="Delete">
 <?php
 if (isset($_POST['delete'])) {
 $id=$_POST['id'];
@@ -53,7 +55,7 @@ else{
 </br>
 Enter an id if you want to promote an account as an admin:</br>
 <input type="text" name="id2" >
-<input type="submit" name="promote" value="Promote">
+<input type="submit" class="buttonn" name="promote" value="Promote">
 <?php
 if (isset($_POST['promote'])) {
 $id=$_POST['id2'];
@@ -76,7 +78,7 @@ else{
 }
 ?>
 </form>
-<p> <a href="admin.php" style="color: blue;">Back</a> </p>
+<p> <a href="admin.php" class="button"><span>Back</span></a> </p>
 <h2>User List:</h2>
 <?php
 	$query="SELECT * FROM users";
@@ -105,6 +107,35 @@ else{
 
 mysqli_close($db);	
 ?>
+<style>
+   div.transbox {
+	text-align: center;
+	padding: 30px;
+	width:380px;
+    height:1050px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.7;
+    filter: alpha(opacity=60); 
+  
+}
+
+.buttonn {
+	background-color: black;
+    border: none;
+    color: red;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 14px;
+	font-family:arial,sans-serif;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	</style>
 
 </body>
 </html>

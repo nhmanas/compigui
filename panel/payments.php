@@ -20,15 +20,18 @@
 
   gtag('config', 'UA-129052302-1');
 </script>
+<link rel="stylesheet" type="text/css" href="style.css">
 
 	<title>Payments</title>
 	
 </head>
 <body>
 
+<div align="center" class="transbox">
 
 
-<p> <a href="admin.php" style="color: blue;">Back</a> </p>
+
+<p> <a href="admin.php" class="button"><span>Back</span></a> </p>
 <?php 
 	$i=0;
 	$query="SELECT * FROM users where pay='p'";
@@ -38,7 +41,7 @@
 	$i++;}
 	$salary=$i*70;
 	echo "Total salary =".$salary. "TL"; ?>
-<h2>Paid User List:</h2>
+<h2 class="textt">Paid User List</h2>
 <?php
 	
 	$query="SELECT * FROM users where pay='p'";
@@ -65,6 +68,29 @@
 
 	mysqli_close($db);
 ?>
+
+<style>
+   div.transbox {
+	text-align: center;
+	padding: 30px;
+	width:360px;
+    height:670px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.7;
+    filter: alpha(opacity=60); 
+  
+}
+
+.textt {
+	
+	font-family:arial,sans-serif;
+	font-size: 25px;
+	color:black;
+	font-weight:bold;
+}
+	</style>
 
 </body>
 </html>
